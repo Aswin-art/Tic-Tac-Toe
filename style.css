@@ -1,0 +1,138 @@
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+h1{
+    color: greenyellow;
+}
+
+#board{
+    display: grid;
+    grid-template-columns: 100px 100px 100px;
+    grid-template-rows: 100px 100px 100px;
+    cursor: pointer;
+    position: relative;
+}
+
+.tile{
+    color: greenyellow;
+    font-size: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.border-right{
+    border-right: .2em solid indigo;
+}
+.border-left{
+    border-left: .2em solid indigo;
+}
+.border-bottom{
+    border-bottom: .2em solid indigo;
+}
+
+.strike{
+    position: absolute;
+    background-color: darkred;
+}
+
+.strike-row-1{
+    width: 100%;
+    height: 4px;
+    top: 15%;
+}
+
+.strike-row-2{
+    width: 100%;
+    height: 4px;
+    top: 48%;
+}
+
+.strike-row-3{
+    width: 100%;
+    height: 4px;
+    top: 83%;
+}
+
+.strike-col-1{
+    width: 4px;
+    height: 100%;
+    left: 15%;
+}
+
+.strike-col-2{
+    width: 4px;
+    height: 100%;
+    left: 48%;
+}
+
+.strike-col-3{
+    width: 4px;
+    height: 100%;
+    left: 83%;
+}
+
+.strike-diagonal-1{
+    width: 90%;
+    height: 4px;
+    top: 50%;
+    left: 5%;
+    transform: skewY(45deg);
+}
+.strike-diagonal-2{
+    width: 90%;
+    height: 4px;
+    top: 50%;
+    right: 5%;
+    transform: skewY(-45deg);
+}
+
+#modal-result{
+    text-align: center;
+    border: 8px solid indigo;
+    padding: 50px;
+    width: 50%;
+    margin-top: 50px;
+}
+
+h2{
+    color: greenyellow;
+    font-size: 2em;
+    margin-top: 0;
+}
+
+#btn-restart{
+    background-color: transparent;
+    border: 1px solid greenyellow;
+    color: greenyellow;
+    font-size: 1em;
+    padding: 10px;
+}
+
+#btn-restart:hover{
+    cursor: pointer;
+}
+
+.x-hover:hover::after{
+    content: "X";
+    opacity: .5;
+}
+
+.o-hover:hover::after{
+    content: "O";
+    opacity: .5;
+}
+
+.hidden{
+    display: none;
+}
+
+.visible{
+    display: block;
+}
